@@ -1,0 +1,241 @@
+SmartSVN 8.6.6 (2015-03-10)
+===========================
+Fixed
+-----
+- OS X: internal error related to composed/decomposed
+  unicode file names
+- Windows 64-bit bundle did not start
+- Various Refresh-related fixes
+
+
+SmartSVN 8.6.5 (2015-03-03)
+===========================
+Fixed
+-----
+- Bug dialog: if no e-mail is provided, remind to enter it
+- Conflict Solver:
+  - ultra-flat [x] buttons were visible
+  - current-line highlight did not work
+- Directory Tree: tree conflicts are not properly displayed in tooltip
+- Refresh: possible internal error related to tree conflicts
+- GUI:
+  - Filtering by file names: hidden files were displayed before visible ones
+  - OS X:
+    - table columns, e.g. in the preferences, were not wide enough
+    - OS X 10.10 (Yosemite): right-clicking a table header did not show the
+      column popup menu
+- a lot of automatically reported, different internal errors have been fixed
+
+
+SmartSVN 8.6.4 (2015-02-22)
+===========================
+
+New Features, Improvements
+--------------------------
+- upgraded to Subversion 1.8.11
+- warns on attempt to check out whole tags or branches folder
+- replaced WANdisco logos and links with those to SmartSVN GmbH
+
+Fixed
+-----
+- internal error listing branches/tags when user has no access on parent
+  directories in repository
+- Rename: internal error renaming a file with null character in its name
+- Setup Repository: internal error entering illegal file name characters
+- Refresh: possible internal error for UNC paths
+
+
+SmartSVN 8.6.3 (2014-12-08)
+===========================
+
+New Features, Improvements
+--------------------------
+- Bug reporting now suggests the email within the smartsvn license as the contact email
+- Show client certificate option in the SSL tab in preferences
+
+Fixed
+-----
+- Configure master password window keeps reappearing after upgrading 
+- Changing the master password function fixed
+- Internal error when processing a directory during a refresh
+- Crash during first start-up with an evaluation license
+- Possible error in table when closing a dialogue box
+- Possible internal error relating to directory symlinks during a refresh
+- Incompatibility with Cairo on Redhat/CentOS 6.6
+- Internal error whilst reading log entries
+- Possible display error whilst showing passwords
+- Possible display error with notification pop-up
+- Internal error when right-clicking the annotate window in Linux
+
+
+
+SmartSVN 8.6.2 (2014-11-12)
+===========================
+
+New Features, Improvements
+--------------------------
+- Support for Mac OSX 10.10 Yosemite
+
+Fixed
+-----
+- Issue with log and graphing when no cache created
+
+
+SmartSVN 8.6.1 (2014-10-02)
+===========================
+
+Fixed
+-----
+- Possible internal error with the range progress viewer
+- IllegalThreadStateException in Shutdown hooks
+- Drag and drop autoscrolling in tree
+- Internal error when copy to repository svn error occurs
+- Merge dialog. Merge button not disabling correctly
+- Repository Browser. Error when switching between directory to file view during a refresh
+- Bug with Log Revision filter and the use of "!"
+- Refresh error because of tree conflicts
+- Possible error with check out and entry of a invalid directory
+- Table not being made completely visible
+- Linux Mint 17 Cinnamon: progress dialog not starting until clicked
+- Possible error with some styled text
+- Error when changing commit messages
+- Notification Popup does not show while minimised and stored later
+- Notification Popup bold font size
+- Changed file names do not display correctly with external diff tools. 
+
+
+SmartSVN 8.6 (2014-08-21)
+============
+New Features, Improvements (compared to 8.5)
+--------------------------------------------
+- Bug reporting now optionally allows uploading bug reports directly to WANdisco from within SmartSVN
+- Local Refresh performance tuned through extensive rework
+- Improved handling of svn:global-ignores inherited property
+- Several improvements/fixes for Compare functionality
+- File protocol authentication implemented to allow file protocol locks
+- Last open working copy can now be remembered even if not managed as a project
+- Option added to manage unmanaged working copies as a project
+- Windows SASL authentication support added and required DLLs provided
+
+Fixed (since RC 2)
+------------------
+- Internal error when selecting a file in the file table
+- Potential crash during Linux startup
+- Possible internal error in repository browser related to file externals
+- Refresh could lead to internal error related to tree conflicts
+- Bugtraq possible internal error
+- Internal error in tables on Linux
+- Potentially incorrect rendering of directory tree in Linux
+
+
+SmartSVN 8.6 Release Candidate 2 (2014-08-08)
+===================================
+Improved
+--------
+- Changeset "Allow only committable entries" option reworded for clarity
+- Detect Renames during commit now disallows selecting the same source multiple times
+
+Fixed
+-----
+- Projects containing multiple WCs sometimes caused internal error
+- Refresh could lead to internal error related to file externals
+- Refresh could lead to internal error related to global ignores
+
+SmartSVN 8.6 Release Candidate 1 (2014-08-01)
+===================================
+Improved
+--------
+- File protocol authentication implemented, using system login as default
+- "Manage as Project" menu item added for unmanaged working copies
+- Navigation buttons added to notifications to show previous/next notification
+
+Fixed
+-----
+- Internal error in transactions tree
+- Opening a missing project could end up in an endless loop
+- Linux: Refresh might not have picked up changes if inotify limit was reached
+- Merge dialog "Merge From" label was cut off
+- Illegal character error while editing svn:mergeinfo
+- Context menu wasn’t available in commit message text area
+- Progress window for explorer integration context menu actions sometimes appeared behind shell window
+
+SmartSVN 8.6 preview 4 (2014-07-21)
+===================================
+Improved
+--------
+- File protocol locks now supported
+- Last open WC can now be remembered even if not managed as a project
+
+Fixed
+-----
+- After reverting an added directory (to unchanged), moved files could still show up in directory
+- File Monitor internal error
+- Timer related resource leak
+- URLs were shown with spaces as "%20"
+- Linux: Local refresh after an svn mv of a versioned file into an added directory caused error
+- File names with "\r" caused error
+- Repository Browser: Expanding a directory caused the viewable part of the tree to jump around
+
+
+SmartSVN 8.6 preview 3 (2014-07-10)
+===================================
+Improved
+--------
+- Windows 32 bit support for SASL repository authentication added.
+- Changes view: now shows detected line separators in title
+- Changed default syntax highlighting for *.m files to be C++ instead of Mumps
+
+Fixed
+-----
+- Gray area shown while clicking-and-holding left mouse button on Windows
+- Compare views: misleading "binary content" message for large text files
+- Native crash when getting log properties for a single file
+- Possible error during refresh related to ignored directories on Windows
+- Error when displaying hook failure dialog
+
+
+SmartSVN 8.6 preview 2 (2014-06-27)
+===================================
+Improved
+--------
+- Compare now skips empty lines before running core algorithm
+- Compare: navigation to previous/next changes now focuses larger size of block
+- Compare: optionally show white spaces only in inner-line changes
+- Drag and drop: copy/move of a file to a directory in the added state now possible
+- Creating a branch/tag from a repository branch now makes it clear which branch you are copying
+- Added option to refresh while in background
+- Files table columns were extremely narrow by default
+- Changed handling of locks status in files table to only show locks related information when needs-lock column is displayed
+- When WC was not in disk cache toolbar buttons took longer than expected to become usable 
+- Task bar item now highlighted if a dialog is shown while not in front
+- OS X: chooser buttons changed to look better in flat style
+- Double clicking on file in output tab now does Show Changes
+- Changed Root Paths form: added ability to drop multiple directories
+
+Fixed
+-----
+- Check for updates didn’t report new versions when using intermediate builds
+- Import into repository would error if a subpath in the repo was chosen at the first step
+- Possible internal error during model refresh
+- Actions were disabled after short time when working tree root is selected
+- Removed files/directories might have been reported as "copied" in Commit Output view
+- Resource Leak: TextLayouts remained after closing all windows
+- Drag and drop: drag-image was not disposed
+- Drag and drop: possible internal error
+- History-scheduled files remained upon a refresh after commit
+- Refresh: possible internal error
+- Edit|Customize "Menu Item" column was not wide enough
+- Annotate: possible internal error going to first commit
+- Possible error when moving file to trash within SmartSVN
+- Editable combo-box in Windows showed truncated initial text
+- Refresh (after commands): failed to pick up changes under some conditions
+- Compare: possible internal error when scrolling using mouse wheel
+- Merge dialog: Revision Range input field could become too wide
+- Opening a needs-lock file did not ask whether to acquire lock
+- Compare: internal error when trying to export HTML for binary file diff
+- Z-order for notification pop ups was incorrect
+- Windows: logging out or shutting down did not invoke shutdown hooks
+- Revision graph crashed in some circumstances
+- Warning message for unrecognised svn:eol-style was truncated
+- Possible internal error when pasting a non-string for speed search
+- Vertical image of button on OS X 10.9 was not aligned
